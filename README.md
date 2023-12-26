@@ -1,6 +1,8 @@
-# Virutal Gallery Tour (ALPHA)
+# Virtual Gallery Tour (ALPHA)
 
-this project is not done
+ThreeJs 3d virtual tour
+
+(this project is not done)
 
 ## install the module
 ```
