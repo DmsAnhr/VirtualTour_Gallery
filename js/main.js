@@ -225,7 +225,7 @@ function init() {
             });
         },
         function ( xhr ) {
-            buttonCover.innerHTML = 'LOADING... '+parseInt(xhr.loaded / xhr.total) * 100+'%';
+            buttonCover.innerHTML = 'LOADING... '+parseInt((xhr.loaded / xhr.total) * 100)+'%';
             console.log( parseInt( xhr.loaded / xhr.total * 100 ) + '% loaded' );
             if ((xhr.loaded / xhr.total * 100) == 100) {
                 threeReady = true;
