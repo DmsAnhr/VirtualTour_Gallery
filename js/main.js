@@ -63,7 +63,7 @@ let touchStartY;
 let mouseDownTime, clickToX, clickToZ;
 
 let circleMarker;
-
+let threeReady = false;
 function init() {
     
     
@@ -224,9 +224,11 @@ function init() {
             });
         },
         function ( xhr ) {
-            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+            const buttonCover = document.getElementById("coverButton");
+            buttonCover.innerHTML = 'LOADING... '+parseInt(xhr.loaded / xhr.total) * 100+'%';
+            console.log( parseInt( xhr.loaded / xhr.total * 100 ) + '% loaded' );
             if ((xhr.loaded / xhr.total * 100) == 100) {
-                const buttonCover = document.getElementById("coverButton");
+                threeReady = true;
                 buttonCover.innerHTML = 'ENTER TOUR<i class="fa fa-chevron-right" style="margin-left: 12px;"></i>';
             }
         },
@@ -258,10 +260,12 @@ let coverShow = true;
 
 const buttonCover = document.getElementById("coverButton");
 buttonCover.addEventListener("click", function() {
-    circleMarker.visible = false;
-    const cover = document.getElementById('cover');
-    cover.style.transform = 'translateY(100%)';
-    coverShow = false;
+    if (threeReady) {
+        circleMarker.visible = false;
+        const cover = document.getElementById('cover');
+        cover.style.transform = 'translateY(100%)';
+        coverShow = false;
+    }
 });
 
 const closeModalButton = document.getElementById("closeModal");
