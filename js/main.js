@@ -8,15 +8,15 @@ import { OutlinePass } from 'three/addons/postprocessing/OutlinePass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
 import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
-import '/assets/music_gallery.glb';
-import '/assets/images/1.jpg';
-import '/assets/images/2.jpg';
-import '/assets/images/3.jpg';
-import '/assets/images/4.jpg';
-import '/assets/images/5.jpg';
-import '/assets/images/6.jpg';
-import '/assets/images/7.jpg';
-import '/assets/images/8.jpg';
+import '../assets/images/1.jpg';
+import '../assets/images/2.jpg';
+import '../assets/images/3.jpg';
+import '../assets/images/4.jpg';
+import '../assets/images/5.jpg';
+import '../assets/images/6.jpg';
+import '../assets/images/7.jpg';
+import '../assets/images/8.jpg';
+import '../assets/music_gallery.glb';
 
 
 const floorObjectName = ['Object_2', 'Object_3', 'Object_6'];
