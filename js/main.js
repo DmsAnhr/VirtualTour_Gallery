@@ -64,6 +64,7 @@ let mouseDownTime, clickToX, clickToZ;
 
 let circleMarker;
 let threeReady = false;
+const buttonCover = document.getElementById("coverButton");
 function init() {
     
     
@@ -224,7 +225,6 @@ function init() {
             });
         },
         function ( xhr ) {
-            const buttonCover = document.getElementById("coverButton");
             buttonCover.innerHTML = 'LOADING... '+parseInt(xhr.loaded / xhr.total) * 100+'%';
             console.log( parseInt( xhr.loaded / xhr.total * 100 ) + '% loaded' );
             if ((xhr.loaded / xhr.total * 100) == 100) {
@@ -258,7 +258,7 @@ window.addEventListener( 'resize', windowResize, false );
 
 let coverShow = true;
 
-const buttonCover = document.getElementById("coverButton");
+// const buttonCover = document.getElementById("coverButton");
 buttonCover.addEventListener("click", function() {
     if (threeReady) {
         circleMarker.visible = false;
